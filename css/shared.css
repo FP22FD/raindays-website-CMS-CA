@@ -1,6 +1,6 @@
 /* site layout */
 
-#main-container {
+/* #main-container {
   display: grid;
   grid-template-columns: 1fr minmax(800px, 1300px) 1fr;
   grid-template-rows: auto auto 1fr;
@@ -9,176 +9,19 @@
     "header header header"
     "left main right"
     "footer footer footer";
+} */
+
+#main-container {
+  display: flex;
+  flex-direction: column;
 }
 
 main {
+  padding: 24px;
   grid-area: main;
 
   display: flex;
   flex-direction: column;
   row-gap: 32px;
-  padding: 32px 0 32px 0;
-}
-
-/* top filter */
-
-#filter-top {
-  background-color: var(--bg-beige-color);
-  display: flex;
-  justify-content: space-between;
-  text-transform: capitalize;
-  padding: 16px;
-  gap: 8px;
-}
-
-/* Banner bottom */
-
-#banner-bottom {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-#banner-bottom img {
-  width: 100%;
-}
-
-#banner-bottom .container {
-  padding: 24px;
-  display: grid;
-  grid-template-columns: 24px auto 24px;
-  grid-template-rows: auto 100px;
-  background-color: var(--bg-white-color);
-}
-
-#banner-bottom .container > div:first-child {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: flex;
-  justify-content: center;
-}
-
-#banner-bottom .text {
-  background-color: var(--bg-beige-color);
-  grid-column-start: 2;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 2;
-  text-align: center;
-  text-transform: uppercase;
-  box-shadow: 4px 4px 4px grey;
-}
-
-/* promo bottom */
-
-#promo-bottom {
-  background-color: var(--secondary-color);
-  display: flex;
-  text-transform: uppercase;
-  padding: 16px;
-  flex-direction: column;
-  align-items: center;
-
-  text-align: center;
-}
-
-#promo-bottom a:not(:hover) {
-  color: var(--white);
-}
-
-/* products pagination */
-
-#products-pagination {
-  display: flex;
-  grid-template-columns: 24px auto 24px;
-  align-items: center;
-  gap: 40px;
-
-  justify-content: center;
-  margin: 8px 0px 8px 0px;
-  height: 24px;
-}
-
-#products-pagination a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 36px;
-  height: 36px;
-  border-bottom: none;
-}
-
-#products-pagination a:hover,
-#products-pagination a.active {
-  background-color: var(--bg-gray-line);
-  border-radius: 50%;
-}
-
-/* CTA - view more */
-
-.cta-large {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-
-  background-color: var(--secondary-color);
-  text-transform: uppercase;
-  padding: 16px;
-  border-radius: 16px;
-}
-
-.cta-large a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-
-.cta-large,
-.cta-large a:not(:hover) {
-  color: var(--white);
-}
-.cta-large span:hover {
-  color: var(--primary-color);
-}
-
-/* media query */
-
-@media (max-width: 800px) {
-  #main-container {
-    grid-template-columns: 16px auto 16px;
-  }
-
-  #banner-top {
-    flex-direction: column;
-  }
-
-  #banner-top .text-container {
-    justify-content: space-around;
-  }
-
-  #banner-top .icon {
-    width: 32px;
-  }
-
-  /* Slider - ref. https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
-  #filter-top {
-    box-sizing: border-box;
-    width: 90vw;
-    overflow: hidden;
-    overflow-x: auto;
-
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  #promo-bottom {
-    display: none;
-  }
+  /* padding: 32px 24px 32px 0; */
 }

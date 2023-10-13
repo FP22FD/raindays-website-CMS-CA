@@ -114,7 +114,13 @@ a.active {
   border-bottom: 4px solid var(--primary-color);
 }
 
-.display-2 {
+#header-menu {
+  padding: 24px;
+}
+#header-menu img {
+  width: 200px;
+}
+/* .display-2 {
   font-size: 64px;
   margin: 0;
   text-transform: uppercase;
@@ -130,4 +136,4 @@ a.active {
   .display-2 {
     font-size: 32px;
   }
-}
+} */
