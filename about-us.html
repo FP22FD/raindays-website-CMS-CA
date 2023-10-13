@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="about Rainydays company">
+    <title>Rainydays | About us</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/about-us.css">
+    <link rel="stylesheet" href="css/bag-popup.css">
+    <script type="module" defer src="js/about-us.js"></script>
+    <!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 3659947, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<body>
+    <div id="main-container">
+
+        <header id="header-menu">
+            <!-- menu -->
+
+            <!-- grid part | menu -->
+            <label class="hamburger-icon" for="hamburger" aria-label="Menu">
+                <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
+            </label>
+            <input type="checkbox" id="hamburger">
+
+            <nav aria-label="main menu">
+                <a class="active" href="index.html">Home</a>
+                <a href="products.html">Women</a>
+                <a href="products.html">Men</a>
+                <a href="about-us.html">About us</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Find us</a>
+            </nav>
+
+            <!-- grid part | logo -->
+            <a id="logo-img" href="index.html">
+                <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
+            </a>
+
+            <!-- grid part | bag -->
+            <template id="template1">
+                <article class="section1">
+                    <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket" id="bag-img">
+                    </div>
+
+                    <div id="details">
+                        <h2 class="display-3">Men’s Fleece Jacket FE40 </h2>
+                        <span id="size">Size: M</span>
+                        <span id="qty">Q.ty: 1</span>
+                        <span id="delivery">Delivery: Free</span>
+                        <span id="price" class="price">kr 900,00 </span>
+                    </div>
+                </article>
+            </template>
+
+            <template id="template2">
+                <table>
+                    <tr>
+                        <td>Order total</td>
+                        <td class="price">kr</td>
+                        <td id="final-price" class="price">000,00</td>
+                    </tr>
+                </table>
+
+                <div class="section3">
+                    <div class="cta-large">
+                        <a href="bag.html">
+                            Checkout
+                            <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                        </a>
+                    </div>
+                </div>
+            </template>
+            <!-- START: bag popup -->
+            <div id="popup">
+                <label for="icon-bag">
+                    <img src="assets/icons/shopping_bag.svg" alt="shopping bag">
+                    <span id="icon-bag-pil"><span>1</span></span>
+                </label>
+                <input type="checkbox" id="icon-bag">
+
+                <div class="modal-content" id="popup-products">
+                    <article class="section1">
+                        <div><img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket"></div>
+                        <div id="details">
+                            <h2 class="display-3">Men’s Fleece Jacket FE40 </h2>
+                            <span id="size">Size: M</span>
+                            <span id="qty">Q.ty: 1</span>
+                            <span id="delivery">Delivery: Free</span>
+                            <span class="price">kr 900,00 </span>
+                        </div>
+                    </article>
+                    <table>
+                        <caption>Order details</caption>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>kr</td>
+                            <td>900,00</td>
+                        </tr>
+                        <tr>
+                            <td>Shipping</td>
+                            <td>kr</td>
+                            <td>000,00</td>
+                        </tr>
+                        <tr>
+                            <td>Order total</td>
+                            <td class="price">kr</td>
+                            <td class="price">900,00</td>
+                        </tr>
+                    </table>
+
+                    <div class="section3">
+                        <div class="cta-large">
+                            <a href="bag.html">
+                                Checkout
+                                <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- END: bag popup -->
+        </header>
+
+        <main id="main">
+            <section id="grid-container">
+                <div class="item1">
+                    <h1>
+                        About us
+                    </h1>
+                </div>
+
+                <div class="item2">
+                    <img src="assets/images/low-quality/about-us.jpg" alt="a man on the bridge">
+                </div>
+
+                <div class="item3">
+                    <p>
+                        Our brand was born from the passion for sport and respect for nature. Behind each jacket, in
+                        addition to the fabric, lives a thought, a deep exploration of comfortable and high quality
+                        technological fabrics.
+                        Thus, the main objective of our brand is to guarantee you the best quality-price.
+                        <br><br>
+                        Our brand was born from the passion for sport and respect for nature. Behind each jacket, in
+                        addition to the fabric, lives a thought, a deep exploration of comfortable and high quality
+                        technological fabrics.
+                        Thus, the main objective of our brand is to guarantee you the best quality-price.
+                        Our brand was born from the passion for sport and respect for nature. Behind each jacket, in
+                        addition to the fabric.
+                    </p>
+
+                    <div class="cta-large">
+                        <a href="/">
+                            Home
+                            <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="item 4">
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="social-media">
+                <a href="https://www.instagram.com"><img src="assets/icons/icon_instagram.svg" alt="icon Instagram"></a>
+                <a href="https://twitter.com"><img src="assets/icons/icon_twitter.svg" alt="icon twitter"></a>
+                <a href="https://www.youtube.com"><img src="assets/icons/icon_youtube.svg" alt="icon youtube"></a>
+            </div>
+            <div class="header">
+                <nav class="col" aria-labelledby="menu-help">
+                    <h4 id="menu-help">Help</h4>
+                    <ul>
+                        <li><a href="not-available.html">Track order</a></li>
+                        <li><a href="not-available.html">Payment</a></li>
+                        <li><a href="not-available.html">Delivery & returns</a></li>
+                        <li><a href="not-available.html">Size guide</a></li>
+                        <li><a href="not-available.html">Terms & conditions</a></li>
+                        <li><a href="not-available.html">FAQ</a></li>
+                    </ul>
+                </nav>
+                <nav class="col" aria-labelledby="menu-contact">
+                    <h4 id="menu-contact">Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="contact.html">Find us</a></li>
+                        <li><a href="not-available.html">Press</a></li>
+                        <li><a href="not-available.html">Work with us</a></li>
+                        <li><a href="not-available.html">Corporate responsibility</a></li>
+                        <li><a href="not-available.html">Investors site</a></li>
+                    </ul>
+                </nav>
+                <nav class="col" aria-labelledby="menu-about-us">
+                    <h4 id="menu-about-us">About us</h4>
+                    <ul>
+                        <li><a href="about-us.html">Our story</a></li>
+                        <li><a href="not-available.html">Sustainability</a></li>
+                        <li><a href="not-available.html">Transparency</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="bottom">
+                <a href="not-available.html">&copy; Rainydays 2022</a>
+                <span>|</span>
+                <a href="not-available.html">Privacy</a>
+                <span>|</span>
+                <a href="not-available.html">Cookies</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

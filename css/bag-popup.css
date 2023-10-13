@@ -1,0 +1,110 @@
+/*Bag popup*/
+
+header #popup {
+  display: block;
+}
+
+header #icon-bag {
+  display: none;
+}
+
+header #icon-bag-pil {
+  display: inline-flex;
+  position: relative;
+  left: -16px;
+  top: -12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+
+  font-size: 12px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+header #icon-bag:checked ~ .modal-content {
+  display: block;
+}
+
+header #icon-bag:checked ~ #xyz {
+  display: block;
+}
+
+header #popup .modal-content {
+  display: none;
+  background: var(--bg-gray-light-color);
+  padding: 32px;
+  max-width: 30vh;
+  box-shadow: 8px 2px 12px 2px #aaaaaa;
+
+  position: fixed;
+  top: 45px;
+  right: 0px;
+  margin-left: 25px;
+  z-index: 1000;
+}
+
+header #popup .price {
+  color: var(--primary-color);
+}
+
+header #popup .section1 {
+  display: flex;
+
+  background-color: var(--bg-beige-color);
+}
+
+header #popup .section1 > div {
+  flex-basis: 50%;
+
+  margin: 8px;
+}
+
+header #popup .section1 img {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: var(--bg-white-color);
+  padding: 4px;
+}
+
+#details {
+  display: grid;
+  font-size: small;
+}
+
+#details h2 {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  background-color: var(--bg-beige-color);
+  margin: 8px 0;
+  margin: 4px 0 16px 0;
+  padding: 8px;
+}
+
+caption {
+  text-align: left;
+  margin: 4px;
+}
+
+td {
+  font-size: small;
+}
+
+table tr td:nth-child(1) {
+  width: 100%;
+}
+table tr td:nth-child(2) {
+  width: min-content;
+  padding-right: 8px;
+}
+
+table tr td:nth-child(3) {
+  text-align: right;
+  width: min-content;
+}

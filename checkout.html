@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pay for your Rainydays products">
+    <title>Rainydays | Checkout</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <script type="module" defer src="js/checkout.js"></script>
+    <!-- Hotjar Tracking Code for Rainydays-Website-Interaction-Design-CA -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 3659947, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<body>
+    <div id="main-container">
+
+        <header id="header-menu">
+            <!-- menu -->
+
+            <!-- grid part | menu -->
+            <label class="hamburger-icon" for="hamburger" aria-label="Menu">
+                <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
+            </label>
+            <input type="checkbox" id="hamburger">
+
+            <nav aria-label="main menu">
+                <a class="active" href="index.html">Home</a>
+                <a href="products.html">Women</a>
+                <a href="products.html">Men</a>
+                <a href="about-us.html">About us</a>
+                <a href="contact.html">Contact</a>
+                <a href="contact.html">Find us</a>
+            </nav>
+
+            <!-- grid part | logo -->
+            <a id="logo-img" href="index.html">
+                <img src="assets/images/RainyDays_Logo.png" alt="rainydays logo">
+            </a>
+        </header>
+
+        <template id="template1">
+            <section class="item1">
+                <div id="image">
+                    <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
+                </div>
+
+                <div id="description">
+                    <h1></h1>
+
+                    <div class="box-pr">
+                        <div>Size:</div>
+                        <div><span>M</span></div>
+                    </div>
+
+                    <div class="box-pr">
+                        <div>Q.ty:</div>
+                        <div id="number">
+                            <span>10</span>
+                            <!-- <input type="number" min="0" step="1" /> -->
+                        </div>
+                    </div>
+
+
+                    <div class="box-pr">
+                        <div>Delivery:</div>
+                        <div><span>Free</span></div>
+                    </div>
+
+                    <div class="box-pr">
+                        <div>Price:</div>
+                        <span>
+                            <div id="price"></div>
+                        </span>
+                    </div>
+
+
+
+                </div>
+            </section>
+        </template>
+
+        <template id="template2">
+            <section class="item2">
+                <div id="address">
+                    Jeni Smitt Avenue Park, 4 <br>
+                    1129 <br>
+                    New York, USA
+                </div>
+
+                <div id="card">
+                    <img src="assets/icons/icon_visa.svg" alt="Visa">
+                    <span>**** **** **** 2039</span>
+                </div>
+
+                <!-- <div id="progress-bar">
+                    <img src="assets/icons/progress-bar-2.svg" alt="progress bar">
+                </div> -->
+
+                <div id="total">
+                    <div>Total</div>
+                    <div id="final-price">2250 kr</div>
+                </div>
+
+                <div class="cta-large">
+                    <a href="#" id="btnPay">
+                        Pay
+                        <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                    </a>
+                </div>
+            </section>
+        </template>
+
+
+
+        <main id="main">
+            <div id="Order-detailsmary">
+                <h1>Order details</h1>
+            </div>
+
+            <section id="products">
+
+            </section>
+
+            <!-- <section class="item1">
+                <div id="image">
+                    <img src="assets/images/low-quality/RainyDays_Jacket7.png" alt="green Jacket">
+
+                    <div id="description">
+                        <h1>Men’s Fleece Jacket FE40</h1>
+
+                        <div id="size-qty">
+                            <div>Size: M</div>
+                            <div>Q.ty: 1</div>
+                        </div>
+
+                        <div>Delivery: Free</div>
+                        <div id="price">kr 900,00 </div>
+
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- <section class="item2">
+                <div>
+                    <div id="address">
+                        Jeni Smitt Avenue Park, 4 <br>
+                        1129 <br>
+                        New York, USA
+                    </div>
+
+                    <div id="card">
+                        <img src="assets/icons/icon_visa.svg" alt="Visa">
+                        <span>**** **** **** 2039</span>
+                    </div>
+
+
+
+                    <div id="total">
+                        <div>Total</div>
+                        <div>2250 kr</div>
+                    </div>
+
+                    <div class="cta-large">
+                        <a href="checkout-success.html">
+                            Pay
+                            <img src="assets/icons/forward-arrow-white.svg" alt="Forward arrow">
+                        </a>
+                    </div>
+                </div>
+            </section> -->
+        </main>
+
+        <footer>
+            <div class="social-media">
+                <a href="https://www.instagram.com"><img src="assets/icons/icon_instagram.svg" alt="icon Instagram"></a>
+                <a href="https://twitter.com"><img src="assets/icons/icon_twitter.svg" alt="icon Twitter"></a>
+                <a href="https://www.youtube.com"><img src="assets/icons/icon_youtube.svg" alt="icon Youtube"></a>
+            </div>
+            <div class="header">
+                <nav class="col" aria-labelledby="menu-help">
+                    <h4 id="menu-help">Help</h4>
+                    <ul>
+                        <li><a href="not-available.html">Track order</a></li>
+                        <li><a href="not-available.html">Payment</a></li>
+                        <li><a href="not-available.html">Delivery & returns</a></li>
+                        <li><a href="not-available.html">Size guide</a></li>
+                        <li><a href="not-available.html">Terms & conditions</a></li>
+                        <li><a href="not-available.html">FAQ</a></li>
+                    </ul>
+                </nav>
+                <nav class="col" aria-labelledby="menu-contact">
+                    <h4 id="menu-contact">Contact</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="contact.html">Find us</a></li>
+                        <li><a href="not-available.html">Press</a></li>
+                        <li><a href="not-available.html">Work with us</a></li>
+                        <li><a href="not-available.html">Corporate responsibility</a></li>
+                        <li><a href="not-available.html">Investors site</a></li>
+                    </ul>
+                </nav>
+                <nav class="col" aria-labelledby="menu-about-us">
+                    <h4 id="menu-about-us">About us</h4>
+                    <ul>
+                        <li><a href="about-us.html">Our story</a></li>
+                        <li><a href="not-available.html">Sustainability</a></li>
+                        <li><a href="not-available.html">Transparency</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="bottom">
+                <a href="not-available.html">&copy; Rainydays 2022</a>
+                <span>|</span>
+                <a href="not-available.html">Privacy</a>
+                <span>|</span>
+                <a href="not-available.html">Cookies</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

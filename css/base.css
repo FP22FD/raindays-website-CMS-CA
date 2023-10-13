@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  src: url("/assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+/*You can use CSS variables to keep common CSS values such as sizes, colors, fonts, etc (from discordi)*/
+:root {
+  /* "medium light grey" site layout background */
+  --bg-gray-light-color: #dfdfdf;
+
+  /* header, footer bg "light gray"*/
+  --bg-gray-line: #a9aeb3;
+
+  /* accent color "dark coral" */
+  /* --primary-color: #be5a38; */
+  --primary-color: #a84827;
+
+  /* cta, promo banner, logo, icon check color "dark green" */
+  --secondary-color: #264348;
+
+  /* background beige color "eggeshell" */
+  --bg-beige-color: #e9e5d6;
+
+  /* background images "white*/
+  --bg-white-color: #efefef;
+
+  /* font color "dark grey" */
+  --text-color: #212427;
+
+  /* overlay "gray color" */
+  --overlay-color: gray;
+
+  /* bg checkout success page*/
+  --bg-checkout-color: #d9e0e6;
+
+  /* color label produts*/
+  --white: #ffffff;
+  --black: #000000;
+  --dark-green: #464e2e;
+}
+
+/* Useful as default.
+Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+* {
+  box-sizing: border-box;
+} 
+*/
+
+body {
+  background-color: #dfdfdf;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body,
+textarea,
+input,
+button {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+textarea,
+input {
+  color: var(--text-color);
+  border-radius: 4px;
+  border: 1px solid #a9aeb3;
+  padding: 8px;
+}
+
+button[type="submit"] {
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 0;
+}
+
+textarea:focus,
+input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+h2,
+p {
+  color: var(--text-color);
+}
+
+hr {
+  border-top: 1px solid #a9aeb3;
+}
+
+a {
+  color: #212427;
+  text-decoration: none;
+}
+
+a:hover,
+a:hover * {
+  transition: all 0.3s ease;
+  color: var(--primary-color);
+
+  font-weight: bold;
+}
+
+a.active {
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.display-2 {
+  font-size: 64px;
+  margin: 0;
+  text-transform: uppercase;
+  display: inline;
+}
+
+.display-3 {
+  font-size: 16px;
+  display: inline;
+}
+
+@media (max-width: 800px) {
+  .display-2 {
+    font-size: 32px;
+  }
+}
