@@ -1,88 +1,69 @@
-# Rainydays website
+# Custom frontend based on Rainydays with WordPress CMS (Content management system) as backend
 
 <!-- A simple overview of use/purpose. -->
 
-The `Rainydays` website is a e-commerce shop for sport and outdoors jackets.
+WordPress has been used as backend to manage the webshop products, using the wooCommerce plugin.
+Dynamic website link:
+<https://fp22fd-wp-ca.no/>
 
-The original website without API is hosted at the following url:
-<https://luxury-halva-7c3f63.netlify.app>
-
-Website used in usability testing before implementation (main branch) link:
-<https://glistening-hummingbird-317e80.netlify.app/>
-
-Website after some implementations (improvements branch) link:
-<https://improvements--glistening-hummingbird-317e80.netlify.app/>
+WordPress frontend static website link:
+<https://tubular-jelly-00c49b.netlify.app/>
 
 Assignment:
 
-- [Brief](CA-brief.pdf)
+- [Brief](./docs/cms-CA-brief.pdf)
 
 ## Description
 
 <!-- An in-depth paragraph about your project and overview of use. -->
 
-The main goal of this repository is identify usability problems.
-In order to test the usability of `Rainydays website` I followed these steps:
+The main purpose of this repository is to configure an API for `RainyDays` website to consume WordPress/wooCommerce Content Management System APIs.
+The CA is split in two parts: the `Dynamic host` (WordPress backend) and the `Static host` (custom frontend).
 
-- I planed the test,
-- recruited 4 participants,
-- runed the usability tests,
-- analized test data,
-- implemented some cahnges,
-- runed the usability tests again,
-- tested the site's accessibility (`WAVE `tool);
+To set up a local testing environment, I installed WordPress on my local machine using `Local` by Flywheel. Then I installed these plugins:
 
-## Quantitative test
+- `WooCommerce`: to create an online store.
+- `Yoast SEO`: to optimize for search engines (SEO).
+- `WordFence`: to improve the WordPress security, protecting against hackers and malware.
+- `Advanced Custom Fields`: to add custom fields.
+- `Custom Post Type UI`: to create custom content types.
 
-I installed the Hotjar tool and started capturing the data necessary for the quantitative test.
-I choose to collect data through filters, `heatmaps` and `recordings` to track user behavior.
+## Dynamic website
 
-![alt text](hotjar-heatmaps1.png)
-![alt text](hotjar-heatmaps2.png)
+I started by adding 5 fewer products to WooCommerce and created a new Noroff administrator user with a strong password.
 
-## Qualitatie test
+To consume the WooCommerce APIs I needed to setup a `wooCommerce API key`, to avoid to setup `CORS` (with a WP plugin).
 
-This test was very important because I could test critical aspects of the site such as:
+When the local WordPress project was completed I chose - as suggested - the host `one.com`.
 
-- purchasing a jacket,
-- filling out the contact form,
-- checking the use of menus,
-- etc;
+In `one.com` I configured the `sftp` account and the `MySql`/`MariaDb` database name, user name and password. The database host is provided by one.com, visible in the control panel.
 
-As a result, I gained some insights and categorized problems into different groups:
+Then I migrate the WordPress php files to `one.com` by `sftp` via `FileZilla`. As I did not bought the 1-click solution, I needed to transfer all the files. Otherwise it could have been transferred only the folder `wp-content`.
 
-- searching & filtering,
-- navigation,
-- product details,
-- cart editing,
-- form validation & user feedback.
+To export/import the `MySql` database I used the tool phpMyAdmin.
 
-## Analize test data
+At this point I could change the WordPress configuration file `/wp-conf.php` with the database name, account, and hostname.
 
-Therefore, due to time constraints, I chose to prioritize and implement only the most important parts of the website.
+As last point I changed the API url used by Javascript, from localhost ([http://flower-power.local](http://flower-power.local)) to the public hosting ([https://fp22fd-wp-ca.no](https://fp22fd-wp-ca.no/)).
 
-- a dynamic shopping cart,
-- editable shopping cart,
-- an improved error handling in the contact form,
-- ability to set a product as “favorite”,
-- bigger clickable areas – hyperlinks in other elements in addition to the product title,
-- remove details not supported by APIs.
+## Static website
 
-The website interaction implementation has been made with `JavaScript`.
+I used the WordPress `REST API` (`Re`presentational `S`tate `T`ransfer `A`pplication `P`rogramming `I`nterface) and the headless CMS concept.
 
-## Conclusion
+In order to avoid having to rely on PHP for all templating needs, I implemented a frontend using custom HTML/CSS & JavaScript to consume WordPress/wooCommerce data (static host).
+
+Then to access and consume the APIs I used WooCommerce with authentication.
+
+Via JavaScript I called an API to fetch all products and also to fetch a specific product by ID.
+
+After that, I committed my frontend code to GitHub.
+
+Lastly, I deployed the website on Netlify, to publish the `static host`.
+
+## Outcome
 
 Overall, I found this project challenging but very useful, especially when improving the website.
-I learned to plan better and carry out quantitative and qualitative usability tests.
-I was also able to practice what we studied in the project modules.
-
-Additionally, I learned that it’s very important to write html code in a way that is easy to integrate with Javascript. The “Rainydays” website was my first html coding project and – sadly - the code is written in a way that makes it difficult to add dynamic content. This forced me to make some tradeoffs to implement the user suggestions.
-
-I'm very impressed to discover that user experience (UX) is as important as user interface (UI) in the design process.
-Without UX it is very difficult to know exactly what the user really wants and why they want it.
-Some feedback was very interesting, users have different needs and are focused on different details. For example, the feedback about the missing “product availability” pointed out to me that I didn’t think about everything as I thought.
-It was also a really good training to gain the confidence to be face to face with people as they see our work.
-In the end, I think the site turned out really well and I was very happy with the result.
+I learned to implement developing a local test environment, setup essential plugins to website, to use the WordPress panel, to implement a child theme, to use WordPress as headless.
 
 ## Dependencies
 
@@ -93,23 +74,4 @@ To develop the website I have used `Visual Studio Code` with `Prettier` formatte
 
 No other tools are required to compile or run the website.
 
-The Figma prototypes from the previous CA:
-
-- [Figma Mobile prototype](https://www.figma.com/proto/o9Y8vfut7qEa2hOQ5RBPBm/Design1_FP?page-id=924%3A505&node-id=1139%3A899&viewport=472%2C109%2C0.34&scaling=min-zoom&starting-point-node-id=1139%3A899&show-proto-sidebar=1)
-- [Figma Desktop prototype](https://www.figma.com/proto/o9Y8vfut7qEa2hOQ5RBPBm/Design1_FP?page-id=924%3A506&node-id=1139%3A1932&viewport=796%2C261%2C0.11&scaling=scale-down&starting-point-node-id=1139%3A1932&show-proto-sidebar=1)
-
-NB. The implemented website version is slightly different, because few improvements to the Figma/design files were made based on the `Design course` feedbacks from the Tutor.
-
 ### References
-
-Books:
-
-- by Alan Cooper, 2014. About Face: The Essentials of Interaction Design Paperback,
-- how to make duplicate and clone template/cloneNode() method: <https://www.w3schools.com/tags/tag_template.asp>
-
-- flexbox guide: <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>
-- css grid guide: <https://css-tricks.com/snippets/css/complete-guide-grid/>
-- css selectors reference: <https://www.w3schools.com/csSref/css_selectors.php>
-- Hamburger menu based on `HTML and CSS Task 3.4`: <https://vimeo.com/481725388/ee9b0cfbc3>
-- How to overlap grid items: <https://mastery.games/post/overlapping-grid-items/>
-- Plugin for extra image [about us]: https://unsplash.com/

@@ -65,12 +65,14 @@ body {
 body,
 textarea,
 input,
-button {
+button,
+select {
   font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 textarea,
-input {
+input,
+select {
   color: var(--text-color);
   border-radius: 4px;
   border: 1px solid #a9aeb3;
@@ -84,13 +86,15 @@ button[type="submit"] {
 }
 
 textarea:focus,
-input:focus {
+input:focus,
+select:focus {
   outline: 1px solid var(--primary-color);
 }
 
 h2,
 p {
   color: var(--text-color);
+  font-size: smaller;
 }
 
 hr {
@@ -117,23 +121,7 @@ a.active {
 #header-menu {
   padding: 24px;
 }
+
 #header-menu img {
   width: 200px;
 }
-/* .display-2 {
-  font-size: 64px;
-  margin: 0;
-  text-transform: uppercase;
-  display: inline;
-}
-
-.display-3 {
-  font-size: 16px;
-  display: inline;
-}
-
-@media (max-width: 800px) {
-  .display-2 {
-    font-size: 32px;
-  }
-} */

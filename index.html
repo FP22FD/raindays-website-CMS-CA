@@ -24,30 +24,67 @@
         </header>
 
         <main id="main">
-
             <h1>Available products</h1>
 
-            <template id="product">
-                <div class="product">
-                    <div>
-                        <a>
-                            <img>
-                        </a>
+            <div id="loader" class="loader loading-indicator"></div>
 
-                    </div>
-                    <div class="text">
-                        <a>
-                            <h4 class="box-txt"></h4>
-                        </a>
-                        <div class="price">
-                            <span></span>
+            <div id="error" class="error">
+                <p>Unable to search for the products. Please retry again.</p>
+            </div>
+
+            <div id="filters">
+                <div>
+                    <label>Order by</label>
+                    <select id="orderBy">
+                        <option value="name">Product name</option>
+                        <option value="price-asc">Price asc</option>
+                        <option value="price-desc">Price desc</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Search</label>
+                    <input type="text" id="search" aria-label="Search" />
+                </div>
+            </div>
+
+            <div id="container">
+
+                <!-- <button id="sort">Sort by price</button> -->
+
+
+                <template id="product">
+                    <div class="product">
+                        <div>
+                            <a>
+                                <img>
+                            </a>
+                            <div>
+                                <span>
+                                    <div class="box-sale"><span>sale</span>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <a>
+                                <h4 class="box-txt"></h4>
+                            </a>
+                            <div>
+                                <p class="box-dec"></p>
+                            </div>
+                            <div class="sale-price">
+                                <span class="price"></span>
+                            </div>
+                            <div class="regular-price">
+                                <p></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </template>
-
-            <section id="products">
-            </section>
+                </template>
+                <section id="products">
+                </section>
+            </div>
         </main>
     </div>
 

@@ -1,3 +1,7 @@
+h1 {
+  text-align: center;
+}
+
 #product-title {
   text-transform: uppercase;
 }
@@ -21,8 +25,10 @@
   padding: 10px;
 
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(5, auto);
+
+  max-width: 70vmax;
+  align-self: center;
 }
 
 #product-details img {
@@ -100,10 +106,6 @@
 
 .item5 {
   grid-area: 3 / 5 / span 1 / span 4;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .item6 {
