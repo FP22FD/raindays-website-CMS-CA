@@ -4,7 +4,7 @@
 
 WordPress has been used as backend to manage the webshop products, using the wooCommerce plugin.
 Dynamic website link:
-<https://fp22fd-wp-ca.no/>
+<https://wordpress-ca.receitasdeferdi.com/>
 
 WordPress frontend static website link:
 <https://tubular-jelly-00c49b.netlify.app/>
@@ -44,7 +44,7 @@ To export/import the `MySql` database I used the tool phpMyAdmin.
 
 At this point I could change the WordPress configuration file `/wp-conf.php` with the database name, account, and hostname.
 
-As last point I changed the API url used by Javascript, from localhost ([http://flower-power.local](http://flower-power.local)) to the public hosting ([https://fp22fd-wp-ca.no](https://fp22fd-wp-ca.no/)).
+As last point I changed the API url used by Javascript, from localhost ([http://flower-power.local](http://flower-power.local)) to the public hosting ([https://wordpress-ca.receitasdeferdi.com](https://wordpress-ca.receitasdeferdi.com/)).
 
 ## Static website
 
